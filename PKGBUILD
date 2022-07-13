@@ -14,11 +14,11 @@ source=(${pkgname}::"git+${url}")
 sha256sums=('SKIP')
 
 package() {
-    cd "metis-$pkgname-master/files"
+    cd "metis-$pkgname-main/files"
 	install -Dm754 ./rankmirrors "${pkgdir}/usr/bin/rankmirrors"
 }
 
 pkgver() {
-  cd "metis-$pkgname-master"
+  cd "metis-$pkgname-main"
   printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
