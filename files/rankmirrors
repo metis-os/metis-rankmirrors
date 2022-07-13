@@ -4,10 +4,11 @@
 trap finaloutput INT
 
 declare -r myname='rankmirrors'
-declare -r myver='1.5.4'
+declare -r myver='1.5.5'
 
 usage() {
 	echo "${myname} v${myver}"
+	echo "This program is a fork of bruenig's rankmirrors <https://github.com/bruenig/rankmirrors>."
 	echo
 	echo "Ranks pacman mirrors by their connection and opening speed. Pacman mirror"
 	echo "files are located in /etc/pacman.d/. It can also rank one mirror if the URL is"
@@ -29,10 +30,6 @@ usage() {
 
 version() {
 	echo "${myname} (pacman) ${myver}"
-	echo "Copyright (c) 2009 Matthew Bruenig <matthewbruenig@gmail.com>."
-	echo
-	echo "This is free software; see the source for copying conditions."
-	echo "There is NO WARRANTY, to the extent permitted by law."
 	exit 0
 }
 
