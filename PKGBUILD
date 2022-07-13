@@ -14,7 +14,7 @@ source=(${pkgname}::"git+${url}")
 sha256sums=('SKIP')
 
 package() {
-	install -Dm754 "${srcdir}/files/rankmirrors" "${pkgdir}/usr/bin/rankmirrors"
+	install -Dm754 "./files/rankmirrors" "${pkgdir}/usr/bin/rankmirrors"
 }
 
 pkgver() {
