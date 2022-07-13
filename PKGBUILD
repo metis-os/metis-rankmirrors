@@ -1,6 +1,6 @@
 # Maintainer: metislinux.org <info@metislinux.org>
 pkgname=rankmirrors
-pkgver=1.5.5
+pkgver=r4.a76d0e8
 pkgrel=1
 pkgdesc="read a list of mirrors from a file and rank them by speed"
 arch=('any')
@@ -14,7 +14,8 @@ source=(${pkgname}::"git+${url}")
 sha256sums=('SKIP')
 
 package() {
-	install -Dm754 "./files/rankmirrors" "${pkgdir}/usr/bin/rankmirrors"
+    cd files
+	install -Dm754 ./rankmirrors "${pkgdir}/usr/bin/rankmirrors"
 }
 
 pkgver() {
